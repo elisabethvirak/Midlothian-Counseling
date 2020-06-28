@@ -1,0 +1,24 @@
+body {
+    background: rgb(138, 166, 206);
+}
+.jumbotron {
+    background: rgb(94, 119, 154);
+    color: white;
+}
+    h1 {
+        font-family: 'Vollkorn', serif;
+        font-size: 3rem;
+    }
+    h3 {
+        text-emphasis: strong;
+    }
+    .carousel-item {
+        max-height: 30rem;
+    }
+    a {
+        text-emphasis: none;
+        color: black;
+    }
+    a hover {
+        text-emphasis: none;
+    }
