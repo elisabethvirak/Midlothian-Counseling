@@ -19,6 +19,17 @@ body {
         text-emphasis: none;
         color: black;
     }
-    a hover {
+    a:hover {
         text-emphasis: none;
+    }
+    .card-title {
+        text-emphasis: strong;
+        font-size: 1.5rem;
+    }
+    .navbar {
+        background-color: rgba(94, 119, 154, 0);
+        font-size: 1.25rem;
+    }
+    .card {
+        background-color: white;
     }
