@@ -8,6 +8,9 @@ urlpatterns = [
     path('interest/new/',views.CreateInterestView.as_view(),name='interest_new'),
     path('interest/<int:pk>/edit',views.InterestUpdateView.as_view(),name='interest_edit'),
     path('interest/<int:pk>/delete',views.InterestDeleteView.as_view(),name='interest_remove'),
-    path('drafts/',views.DraftListView.as_view,name='post_draft_list'),
+    path('drafts/',views.DraftListView.as_view,name='interest_draft_list'),
     path('interest/<int:pk>/comment/',views.add_comment_to_interest,name='add_comment_to_interest'),
+    path('comment/<int:pk>/approve/',views.comment_approve,name='comment_approve'),
+    path('comment/<int:pk>/remove/',views.comment_remove,name='comment_remove'),
+    path('interest/<int:pk>/publish/',views.interest_published,name='interest_published')
 ]

@@ -52,6 +52,12 @@ class DraftListView(LoginRequiredMixin,ListView):
 
 #-------------------COMMENTS----------------------------------
 @login_required
+def interest_published(request,pk):
+    interest = get_object_or_404(Interest,pk=pk)
+    interest.publish
+    return redirect('interest_detail',pk=pk)
+
+@login_required
 def add_comment_to_interest(request,pk):
     interest = get_object_or_404(Interest,pk=pk)
     if request.method == "POST":
@@ -65,3 +71,17 @@ def add_comment_to_interest(request,pk):
     else:
         form = CommentForm()
     return render(request,'contact/interest_form.html',{'form':form})
+
+
+@login_required
+def comment_approve(request,pk):
+    comment = get_object_or_404(Comment,pk=pk)
+    comment.approve()
+    return redirect('interest_detail',pk=comment.interest.pk)
+
+@login_required
+def comment_remove(request,pk):
+    comment = get_object_or_404(Comment,pk=pk)
+    interest_pk = comment.interest.pk
+    comment.delete()
+    return redirect('interest_detail',pk=interest_pk)

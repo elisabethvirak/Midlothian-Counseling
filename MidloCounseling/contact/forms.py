@@ -9,16 +9,16 @@ class InterestForm(forms.ModelForm):
         
         widgets = {
             'title':forms.TextInput(attrs={'class':'textinputclass'}),
-            'text':forms.TextInput(attrs={'size':600,'class':'editable postcontent'})
+            'text':forms.TextInput(attrs={'size':600,'class':'editable interestcontent'})
         }
 
 class CommentForm(forms.ModelForm):
 
     class Meta():
         model = Comment
-        fields = ('post','responder')
+        fields = ('interest','responder')
 
         widgets = {
             'responder':forms.TextInput(attrs={'class':'textinputclass'}),
-            'post':forms.TextInput(attrs={'size':600,'class':'editable'})
+            'interest':forms.TextInput(attrs={'size':600,'class':'editable'})
         }
