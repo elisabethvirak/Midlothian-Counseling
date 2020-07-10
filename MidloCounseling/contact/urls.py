@@ -2,8 +2,8 @@ from django.urls import path
 from contact import views
 
 urlpatterns = [
-    path('',views.InterestListView.as_view(),name='interest_list'),
-    path('about/',views.AboutView.as_view,name='about'),
+    path('',views.IndexView.as_view(),name='index'),
+    path('about/',views.AboutView.as_view(),name='about'),
     path('interest/<int:pk>',views.InterestDetailView.as_view(),name='interest_detail'),
     path('interest/new/',views.CreateInterestView.as_view(),name='interest_new'),
     path('interest/<int:pk>/edit',views.InterestUpdateView.as_view(),name='interest_edit'),

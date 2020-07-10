@@ -1,6 +1,6 @@
 {% extends "contact/base.html" %}
 
-{% block body_block %}
+{% block content %}
     <form method="POST">
         {% csrf_token %}
         <p>Are you sure you want to delete {{object}}?</p>

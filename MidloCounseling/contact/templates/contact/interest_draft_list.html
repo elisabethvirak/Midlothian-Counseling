@@ -1,6 +1,6 @@
 {% extends "contact/base.html" %}
 
-{% block body_block %}
+{% block content %}
     {% for interest in interests %}
         <div class="post">
             <p class="date">Created: {{interest.created_date|date:'d-m-Y'}}</p>

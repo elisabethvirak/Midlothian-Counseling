@@ -2,12 +2,15 @@ from django.shortcuts import render,get_object_or_404,redirect
 from contact.models import Interest,Comment
 from contact.forms import InterestForm,CommentForm
 from django.urls import reverse_lazy
-# from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import (ListView,TemplateView,DetailView,CreateView,UpdateView,DeleteView)
 import datetime
 
 # Create your views here.
+
+class IndexView(TemplateView):
+    template_name = 'index.html'
 
 class AboutView(TemplateView):
     template_name = 'about.html'

@@ -1,5 +1,5 @@
 {% extends "contact/base.html" %}
-{% block body_block %}
+{% block content %}
 
 <div>
     {% for post in post_list %}
@@ -10,6 +10,7 @@
         </div>
         <a href="{% url 'interest_detail' pk=interest.pk %}">Comments: {{interest.approve_comments.count}}</a>
     </div>
+    {% endfor %}
 </div>
 
 {% endblock %}
