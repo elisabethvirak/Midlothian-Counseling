@@ -1,0 +1,13 @@
+{% extends "contact/base.html" %}
+
+{% block body_block %}
+
+    <h1 class="display-3">{{interest.last_name}},{{interest.first_name}}</h1>
+    {% if interest.submit_date %}
+        <div class="date postdate">
+            {{interest.submit_date}}
+        </div>
+    {% else %}
+        <a class="btn btn-default" href="{% url 'interest_publish' pk=interest.pk %}">Publish</a>
+
+{% endblock %}
