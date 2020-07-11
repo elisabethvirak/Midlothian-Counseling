@@ -22,11 +22,11 @@ class InterestListView(ListView):
         return Interest.objects.filter(submit_date__lte=datetime.datetime.now()).order_by('-submit_date')
 
 
-class InterestDetailView(DetailView):
+class InterestDetailView(LoginRequiredMixin,DetailView):
+    login_url = '/login/'
     model = Interest
 
-class CreateInterestView(LoginRequiredMixin,CreateView):
-    login_url = '/login/'
+class CreateInterestView(CreateView):
     redirect_field_name = 'contact/interest_detail.html'
 
     form_class = InterestForm

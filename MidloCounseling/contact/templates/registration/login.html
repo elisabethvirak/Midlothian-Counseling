@@ -1,9 +1,9 @@
-{% extends contact/base.html %}
+{% extends 'contact/base.html' %}
 
 {% block content %}
-<div class="jumbotron">
-    <h2>PLease Login:</h2>
-    <h3>For Counselors Only</h3>
+<div class="card">
+    <h2 class="card-title">PLease Login:</h2>
+    <p class="card-text">For Counselors Only</p>
 
     {% if form.errors %}
     <p>Your username and password didn't match! Please try again.</p>
@@ -11,7 +11,7 @@
 
     <form action="{% url 'login' %}" method="POST">
         {% csrf_token %}
-        {% form.as_p %}
+        {{form.as_p}}
         <input type="submit" class="btn btn-primary" value="Login">
         <input type="hidden" name="next" value="{{next}}">
     </form>
