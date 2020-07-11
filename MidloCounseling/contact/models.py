@@ -5,11 +5,10 @@ from django.urls import reverse
 # Create your models here.
 
 class Interest(models.Model):
-    author = models.ForeignKey('auth.User',on_delete=models.CASCADE)
-    title = models.CharField(max_length = 200)
     first_name = models.CharField(max_length = 200)
     last_name = models.CharField(max_length = 200)
-    # email = models.Email(max_length = 200)
+    phone = models.CharField(max_length = 10)
+    email = models.EmailField(max_length = 200)
     text = models.TextField()
     create_date = models.DateTimeField(default=timezone.now())
     submit_date = models.DateTimeField(blank=True,null=True)

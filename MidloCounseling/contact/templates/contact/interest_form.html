@@ -1,12 +1,18 @@
 {% extends "contact/base.html" %}
 
 {% block content %}
-
-<h1>Contact Us</h1>
-<form action="mailto:midlocounseling@wellnessassociates.com" method="POST" class="post-form">
-    {% csrf_token %}
-    {{form.as_p}}
-    <button type="submit" class="btn btn-default" name="button">Send</button>
-</form>
-
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="form-group my-4">
+                <h1>Contact Us</h1>
+                <form action="mailto:midlocounseling@wellnessassociates.com" method="POST" class="post-form">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <button type="submit" class="btn btn-default" name="button">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
