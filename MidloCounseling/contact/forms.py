@@ -4,11 +4,11 @@ from contact.models import Interest, Comment
 class InterestForm(forms.ModelForm):
 
     class Meta():
-        first_name = forms.CharField(max_length = 200)
-        last_name = forms.CharField(max_length = 200)
-        phone = forms.CharField(max_length = 10)
-        email = forms.EmailField(max_length = 200)
-        text = forms.CharField(widget=forms.Textarea)
+        # first_name = forms.CharField(max_length = 200)
+        # last_name = forms.CharField(max_length = 200)
+        # phone = forms.CharField(max_length = 10)
+        # email = forms.EmailField(max_length = 200)
+        # text = forms.CharField(widget=forms.Textarea)
         # subject = forms.CharField(max_length=100)
         # message = forms.CharField(widget=forms.Textarea)
         # sender = forms.EmailField()
