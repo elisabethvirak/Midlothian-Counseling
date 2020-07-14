@@ -7,7 +7,8 @@
             <div class="card p-4">
                 <h1 class="mb-4">Contact Us</h1>
                 <form method="POST" class="post-form">
-                    {% csrf_token %}                    
+                    {% csrf_token %}  
+                    {{form.as_p}}                  
                     <div class="form-group">
                         <label for="{{form.first_name.id_for_label}}">First Name:</label>
                         {{form.first_name}}

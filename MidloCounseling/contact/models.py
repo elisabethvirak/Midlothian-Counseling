@@ -7,8 +7,8 @@ from django.urls import reverse
 class Interest(models.Model):
     first_name = models.CharField(max_length = 200)
     last_name = models.CharField(max_length = 200)
-    phone = models.CharField(max_length = 10)
-    email = models.EmailField(max_length = 200)
+    phone = models.CharField(max_length = 10,default='Not Given')
+    email = models.EmailField(max_length = 200,default='Not Given')
     text = models.TextField()
     create_date = models.DateTimeField(default=timezone.now())
     submit_date = models.DateTimeField(blank=True,null=True)
